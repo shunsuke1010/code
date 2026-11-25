@@ -16,7 +16,7 @@ model = YOLO("yolo11x.pt")
 
 # person(COCOのクラスID 0)のみ検出
 # 密集・重なった人物も拾えるよう入力サイズ拡大、信頼度閾値を下げ、NMSのIoU閾値を上げる
-result = model(img, classes=[0], imgsz=1280, conf=0.2, iou=0.8)[0]
+result = model(img, classes=[0], imgsz=1280, conf=0.3, iou=0.8)[0]
 
 # 検出した人物を赤枠で描画
 count = 0
